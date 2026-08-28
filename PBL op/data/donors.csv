@@ -1,0 +1,4 @@
+donorID,name,locationX,locationY,pickupAvailability
+D001,City Hotel,10,20,10:00-22:00
+D002,Bella Restaurant,15,25,12:00-23:00
+D003,Wedding Caterers,30,40,08:00-20:00

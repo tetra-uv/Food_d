@@ -1,0 +1,5 @@
+recipientID,name,type,locationX,locationY,currentCapacity,currentlyAccepting,acceptedFoodTypes,pickupCapability
+R001,Hope NGO,NGO,12,22,140,1,Veg,Van
+R002,Downtown Shelter,Shelter,18,30,250,1,Veg;Non-Veg,Truck
+R003,Community Kitchen,Kitchen,35,45,300,0,Raw,None
+R004,Food Bank East,FoodBank,11,25,400,1,All,Van

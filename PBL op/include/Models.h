@@ -67,6 +67,7 @@ public:
     // Public setters for state management
     void setCapacity(int cap) { currentCapacity = cap; }
     void setAccepting(bool accepting) { currentlyAccepting = accepting; }
+    void setPickupCapability(const std::string& cap) { pickupCapability = cap; }
 };
 
 // Represents a Donation created by a Donor

@@ -6,6 +6,7 @@
 #include "Models.h"
 #include "priorityqueue.h"
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -59,6 +60,10 @@ private:
     // Heap with entries (usable minutes, donation number, index)
     priorityqueue heap_;
 };
+
+// Puts every open donation (PENDING or PARTIAL) in the queue. The index of a donation is
+// its position in the vector. Completed and closed donations are left out.
+void fillurgencyqueue(const vector<Donation>& donations, urgencyqueue& queue);
 
 // Hands out transaction ids T001, T002, ... A static member keeps the last id, so numbers
 // are never reused. After a restart the last id from transactions.csv is given to seed.

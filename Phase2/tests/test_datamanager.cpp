@@ -408,6 +408,14 @@ int main()
               transactionstext() + "T001,DON001,R003,80,9\nT002,DON001,R003,5,9\n",
           "append: the header is created and both rows are added");
 
+    // append: a file whose last line has no line break does not get its rows joined
+    fresh();
+    writefile(PREFIX + "transactions.csv", "transaction_id,donation_id,recipient_id,quantity,travel_minutes");
+    manager.appendtransaction(entry);
+
+    check(readfile(PREFIX + "transactions.csv") == transactionstext() + "T001,DON001,R003,80,9\n",
+          "append: a missing final line break is added before the new row");
+
     // V1 to V8: each rule reports file, line and rule number
     fresh();
     writefile(PREFIX + "donors.csv", donorstext() + "DN002,Copy,HOTEL,1\n");

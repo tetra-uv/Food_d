@@ -114,6 +114,18 @@ int urgencyqueue::popmosturgent()
     return top.payload;
 }
 
+// Pushes only the donations that can still be allocated.
+void fillurgencyqueue(const vector<Donation>& donations, urgencyqueue& queue)
+{
+    for (size_t pos = 0; pos < donations.size(); pos++)
+    {
+        if (donations[pos].status() == PENDING || donations[pos].status() == PARTIAL)
+        {
+            queue.push(donations[pos], (int)pos);
+        }
+    }
+}
+
 // The first id issued after a fresh start is T001.
 EntityId transactionidissuer::last_ = EntityId("T", 0);
 

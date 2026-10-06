@@ -696,11 +696,28 @@ void datamanager::savetable(const string& filename, const string& header,
     }
 }
 
-// Appends one row and flushes it. A missing file is created with its header first.
+// Checks whether the last character of a file is a line break. An empty file counts as yes.
+static bool endswithnewline(const string& path)
+{
+    ifstream file(path.c_str(), ios::binary);
+    char last = '\n';
+    char letter;
+
+    while (file.get(letter))
+    {
+        last = letter;
+    }
+
+    return last == '\n';
+}
+
+// Appends one row and flushes it. A missing file is created with its header first. If the
+// last line of the file has no line break, one is added first so rows never join.
 void datamanager::appendtransaction(const Transaction& entry)
 {
     string path = prefix_ + "transactions.csv";
     bool needheader = !fileexists(path);
+    bool needbreak = !needheader && !endswithnewline(path);
 
     ofstream out(path.c_str(), ios::app);
 
@@ -712,6 +729,11 @@ void datamanager::appendtransaction(const Transaction& entry)
     if (needheader)
     {
         out << TRANSACTIONS_HEADER << "\n";
+    }
+
+    if (needbreak)
+    {
+        out << "\n";
     }
 
     out << entry.toCsvRow() << "\n";

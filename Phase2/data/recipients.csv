@@ -1,0 +1,8 @@
+recipient_id,name,type,available_capacity,accepted_types,accepting,can_pickup,node_id
+R001,Hope Shelter,SHELTER,150,COOKED;PACKAGED,1,1,5
+R002,City Food Bank,FOOD_BANK,300,PACKAGED;PRODUCE;BAKERY,1,1,6
+R003,Green Community Kitchen,COMMUNITY_KITCHEN,120,COOKED,1,1,7
+R004,Sunrise Care Home,CARE_HOME,80,COOKED;BAKERY,1,1,8
+R005,Riverside School Meals,SCHOOL,200,COOKED;PACKAGED,1,1,9
+R006,Bridge Pantry,PANTRY,100,PACKAGED;PRODUCE,1,0,10
+R007,Sevak Kitchen,COMMUNITY_KITCHEN,90,COOKED,0,1,8

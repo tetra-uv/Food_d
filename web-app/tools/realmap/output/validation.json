@@ -1,0 +1,170 @@
+{
+ "static": {
+  "nodes": 2062,
+  "edges": 3609,
+  "components": 1,
+  "donors": 60,
+  "recipients": 140,
+  "donations": 200,
+  "transactions": 28,
+  "geometry_points": 17074,
+  "overlay_bytes": 835242
+ },
+ "engine": {
+  "self_test_exit": 0,
+  "self_test_ok": true,
+  "self_test_seconds": [
+   2.206,
+   1.988,
+   2.037
+  ],
+  "self_test_open": 182,
+  "self_test_matches": 182,
+  "self_test_problems": [],
+  "self_test_warnings": 0,
+  "stderr_tail": "",
+  "boot_seconds": 0.099,
+  "ready_event": "ready",
+  "match_build_100_ms": {
+   "p50": 171.54,
+   "p95": 246.83,
+   "max": 282.76,
+   "total": 16172.4
+  },
+  "match_build_bytes": {
+   "median": 137852,
+   "max": 227574
+  },
+  "candidate_parity": {
+   "checked": 182,
+   "mismatches": [],
+   "n_mismatch": 0
+  },
+  "transaction_travel_engine_check": {
+   "checked": 28,
+   "bad": []
+  },
+  "snapshot_bytes": 66742,
+  "network_bytes": 369626
+ },
+ "oracle": {
+  "exit": 0,
+  "header": "edges: 3609 nodes: 2062 donors: 60 recipients: 140 donations: 200",
+  "open": 182,
+  "zero": 20,
+  "zero_ids": [
+   "DON016",
+   "DON019",
+   "DON023",
+   "DON034",
+   "DON038",
+   "DON049",
+   "DON055",
+   "DON060",
+   "DON062",
+   "DON088",
+   "DON110",
+   "DON133",
+   "DON138",
+   "DON149",
+   "DON151",
+   "DON178",
+   "DON185",
+   "DON193",
+   "DON195",
+   "DON199"
+  ],
+  "boundary_cases": 63,
+  "boundary_examples": [
+   [
+    "DON002",
+    "R073",
+    38
+   ],
+   [
+    "DON002",
+    "R088",
+    38
+   ],
+   [
+    "DON002",
+    "R127",
+    38
+   ],
+   [
+    "DON002",
+    "R070",
+    38
+   ],
+   [
+    "DON006",
+    "R106",
+    44
+   ],
+   [
+    "DON007",
+    "R076",
+    41
+   ],
+   [
+    "DON015",
+    "R004",
+    19
+   ],
+   [
+    "DON015",
+    "R005",
+    19
+   ]
+  ],
+  "cand_dist": {
+   "66": 33,
+   "35": 2,
+   "10": 23,
+   "47": 2,
+   "37": 3,
+   "4": 5,
+   "1": 11,
+   "2": 12,
+   "0": 20,
+   "45": 1,
+   "15": 3,
+   "8": 5,
+   "21": 2,
+   "7": 5,
+   "9": 5,
+   "16": 2,
+   "34": 3,
+   "26": 3,
+   "22": 1,
+   "42": 1,
+   "44": 17,
+   "39": 1,
+   "27": 1,
+   "20": 4,
+   "6": 1,
+   "5": 5,
+   "30": 1,
+   "25": 1,
+   "19": 1,
+   "33": 1,
+   "12": 1,
+   "48": 1,
+   "17": 1,
+   "23": 1,
+   "14": 1,
+   "38": 1,
+   "3": 1
+  },
+  "reasons": {
+   "NOT_ACCEPTING": 4550,
+   "FOOD_INCOMPATIBLE": 10541,
+   "NO_PICKUP": 1987,
+   "NO_CAPACITY": 502,
+   "TOO_FAR": 3447
+  },
+  "zero_share": 0.11
+ },
+ "errors": [],
+ "warnings": []
+}

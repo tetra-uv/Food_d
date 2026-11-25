@@ -1,0 +1,600 @@
+{
+ "fine": {
+  "ways": 14181,
+  "raw_junctions": 16253,
+  "raw_segments": 22251,
+  "components": 28,
+  "dropped_junctions": 66,
+  "dropped_km": 12.5,
+  "dropped_examples": [
+   [
+    "(unnamed tertiary)",
+    30
+   ],
+   [
+    "(unnamed secondary)",
+    4
+   ],
+   [
+    "Loni Road",
+    2
+   ],
+   [
+    "(unnamed motorway)",
+    1
+   ],
+   [
+    "Road No 56",
+    1
+   ],
+   [
+    "(unnamed trunk_link)",
+    1
+   ],
+   [
+    "Bahadurgarh Bypass",
+    1
+   ],
+   [
+    "(unnamed tertiary_link)",
+    1
+   ]
+  ],
+  "lcc_km": 4664.6,
+  "km_by_class": {
+   "motorway": 105.1,
+   "trunk": 409.2,
+   "primary": 450.8,
+   "secondary": 1170.5,
+   "tertiary": 2292.4,
+   "motorway_link": 19.7,
+   "trunk_link": 100.3,
+   "primary_link": 50.8,
+   "secondary_link": 63.2,
+   "tertiary_link": 15.0
+  },
+  "contracted_nodes": 10499,
+  "chains": 16520
+ },
+ "coarse": {
+  "nodes": 2062,
+  "edges": 3609,
+  "radius_m": 300,
+  "minutes_hist": {
+   "1": 988,
+   "2": 1220,
+   "3": 648,
+   "4": 349,
+   "5": 145,
+   "6": 105,
+   "7": 46,
+   "8": 34,
+   "9": 22,
+   "10": 14,
+   "11": 11,
+   "12": 10,
+   "13": 8,
+   "14": 1,
+   "15": 3,
+   "17": 2,
+   "18": 1,
+   "20": 1,
+   "27": 1
+  },
+  "single_junction_nodes": 430
+ },
+ "error": {
+  "pairs": 500,
+  "median_abs_min": 1.74,
+  "p95_abs_min": 5.5,
+  "median_rel": 0.0393,
+  "p95_rel": 0.1104,
+  "median_signed_rel": 0.0371,
+  "short_pairs_lt15min": 21,
+  "short_median_rel": 0.0403,
+  "fine_minutes_median": 48.9,
+  "fine_minutes_max": 116.9
+ },
+ "stats": {
+  "open": 182,
+  "zero": 20,
+  "zero_share": 0.11,
+  "zero_by_food": {
+   "BAKERY": 6,
+   "COOKED": 14
+  },
+  "open_by_food": {
+   "BAKERY": 51,
+   "COOKED": 75,
+   "PACKAGED": 33,
+   "PRODUCE": 23
+  },
+  "cand_dist": {
+   "0": 20,
+   "1": 11,
+   "2": 12,
+   "3": 1,
+   "4": 5,
+   "5": 5,
+   "6": 1,
+   "7": 5,
+   "8": 5,
+   "9": 5,
+   "10": 23,
+   "12": 1,
+   "14": 1,
+   "15": 3,
+   "16": 2,
+   "17": 1,
+   "19": 1,
+   "20": 4,
+   "21": 2,
+   "22": 1,
+   "23": 1,
+   "25": 1,
+   "26": 3,
+   "27": 1,
+   "30": 1,
+   "33": 1,
+   "34": 3,
+   "35": 2,
+   "37": 3,
+   "38": 1,
+   "39": 1,
+   "42": 1,
+   "44": 17,
+   "45": 1,
+   "47": 2,
+   "48": 1,
+   "66": 33
+  },
+  "boundary": [
+   [
+    "DON002",
+    "R073",
+    38
+   ],
+   [
+    "DON002",
+    "R088",
+    38
+   ],
+   [
+    "DON002",
+    "R127",
+    38
+   ],
+   [
+    "DON002",
+    "R070",
+    38
+   ],
+   [
+    "DON006",
+    "R106",
+    44
+   ],
+   [
+    "DON007",
+    "R076",
+    41
+   ],
+   [
+    "DON015",
+    "R004",
+    19
+   ],
+   [
+    "DON015",
+    "R005",
+    19
+   ],
+   [
+    "DON017",
+    "R087",
+    51
+   ],
+   [
+    "DON020",
+    "R129",
+    19
+   ],
+   [
+    "DON022",
+    "R137",
+    4
+   ],
+   [
+    "DON022",
+    "R132",
+    4
+   ],
+   [
+    "DON022",
+    "R139",
+    4
+   ],
+   [
+    "DON022",
+    "R014",
+    4
+   ],
+   [
+    "DON022",
+    "R076",
+    4
+   ],
+   [
+    "DON026",
+    "R092",
+    31
+   ],
+   [
+    "DON029",
+    "R115",
+    21
+   ],
+   [
+    "DON030",
+    "R131",
+    16
+   ],
+   [
+    "DON035",
+    "R080",
+    29
+   ],
+   [
+    "DON036",
+    "R093",
+    43
+   ],
+   [
+    "DON045",
+    "R120",
+    32
+   ],
+   [
+    "DON047",
+    "R129",
+    42
+   ],
+   [
+    "DON047",
+    "R115",
+    42
+   ],
+   [
+    "DON053",
+    "R065",
+    45
+   ],
+   [
+    "DON056",
+    "R111",
+    47
+   ],
+   [
+    "DON057",
+    "R083",
+    46
+   ],
+   [
+    "DON057",
+    "R107",
+    46
+   ],
+   [
+    "DON080",
+    "R120",
+    15
+   ],
+   [
+    "DON084",
+    "R101",
+    46
+   ],
+   [
+    "DON084",
+    "R003",
+    46
+   ],
+   [
+    "DON084",
+    "R004",
+    46
+   ],
+   [
+    "DON084",
+    "R005",
+    46
+   ],
+   [
+    "DON085",
+    "R109",
+    53
+   ],
+   [
+    "DON085",
+    "R067",
+    53
+   ],
+   [
+    "DON086",
+    "R065",
+    22
+   ],
+   [
+    "DON094",
+    "R065",
+    36
+   ],
+   [
+    "DON097",
+    "R107",
+    24
+   ],
+   [
+    "DON100",
+    "R092",
+    34
+   ],
+   [
+    "DON102",
+    "R094",
+    40
+   ],
+   [
+    "DON109",
+    "R119",
+    7
+   ],
+   [
+    "DON109",
+    "R129",
+    7
+   ],
+   [
+    "DON109",
+    "R077",
+    7
+   ],
+   [
+    "DON115",
+    "R076",
+    6
+   ],
+   [
+    "DON115",
+    "R137",
+    6
+   ],
+   [
+    "DON115",
+    "R132",
+    6
+   ],
+   [
+    "DON115",
+    "R139",
+    6
+   ],
+   [
+    "DON129",
+    "R124",
+    25
+   ],
+   [
+    "DON137",
+    "R012",
+    33
+   ],
+   [
+    "DON140",
+    "R010",
+    40
+   ],
+   [
+    "DON144",
+    "R006",
+    25
+   ],
+   [
+    "DON144",
+    "R074",
+    25
+   ],
+   [
+    "DON147",
+    "R094",
+    40
+   ],
+   [
+    "DON147",
+    "R065",
+    40
+   ],
+   [
+    "DON167",
+    "R025",
+    65
+   ],
+   [
+    "DON167",
+    "R057",
+    65
+   ],
+   [
+    "DON176",
+    "R006",
+    36
+   ],
+   [
+    "DON176",
+    "R002",
+    36
+   ],
+   [
+    "DON179",
+    "R028",
+    54
+   ],
+   [
+    "DON190",
+    "R127",
+    46
+   ],
+   [
+    "DON190",
+    "R088",
+    46
+   ],
+   [
+    "DON190",
+    "R073",
+    46
+   ],
+   [
+    "DON190",
+    "R070",
+    46
+   ],
+   [
+    "DON194",
+    "R051",
+    12
+   ]
+  ],
+  "reasons": {
+   "NOT_ACCEPTING": 4550,
+   "FOOD_INCOMPATIBLE": 10541,
+   "OK": 4453,
+   "NO_PICKUP": 1987,
+   "NO_CAPACITY": 502,
+   "TOO_FAR": 3447
+  },
+  "cand_median": 10,
+  "cand_max": 66,
+  "cand_buckets": {
+   "31+": 66,
+   "4-10": 49,
+   "1-3": 24,
+   "0": 20,
+   "11-30": 23
+  }
+ },
+ "notes": [
+  "D CATERER: only 8 usable OSM places (quota 10)",
+  "R SHELTER: only 5 usable OSM places (quota 22)",
+  "R FOOD_BANK: only 1 usable OSM places (quota 8)",
+  "R CARE_HOME: only 15 usable OSM places (quota 18)",
+  "R CHILDRENS_HOME: only 3 usable OSM places (quota 14)",
+  "R RELIEF_POINT: only 12 usable OSM places (quota 18)"
+ ],
+ "raw_place_counts": {
+  "D|BAKERY": 140,
+  "D|BAKERY|far": 1,
+  "D|CANTEEN": 29,
+  "D|CATERER": 8,
+  "D|HOTEL": 448,
+  "D|HOTEL|far": 3,
+  "D|MARKET": 113,
+  "D|MARKET|far": 1,
+  "D|RESTAURANT": 1033,
+  "D|RESTAURANT|far": 5,
+  "R|CARE_HOME": 15,
+  "R|CHILDRENS_HOME": 3,
+  "R|COMMUNITY_CENTRE": 113,
+  "R|COMMUNITY_CENTRE|far": 2,
+  "R|COMMUNITY_KITCHEN": 111,
+  "R|FOOD_BANK": 1,
+  "R|RELIEF_POINT": 12,
+  "R|SHELTER": 5
+ },
+ "donor_types": {
+  "HOTEL": 17,
+  "MARKET": 12,
+  "BAKERY": 13,
+  "CATERER": 8,
+  "CANTEEN": 10
+ },
+ "recipient_types": {
+  "SHELTER": 5,
+  "FOOD_BANK": 1,
+  "COMMUNITY_KITCHEN": 52,
+  "CARE_HOME": 15,
+  "CHILDRENS_HOME": 3,
+  "COMMUNITY_CENTRE": 52,
+  "RELIEF_POINT": 12
+ },
+ "status": {
+  "CLOSED": 8,
+  "COMPLETED": 10,
+  "PARTIAL": 12,
+  "PENDING": 170
+ },
+ "transactions": 28,
+ "snap_m": {
+  "median": 218,
+  "p95": 582,
+  "max": 850
+ },
+ "eps_hist": {
+  "10.0": 3609
+ },
+ "sizes": {
+  "donations.csv": 7870,
+  "donors.csv": 2606,
+  "geo_overlay.json": 835242,
+  "graph_edges.csv": 39045,
+  "graph_nodes.csv": 97772,
+  "recipients.csv": 11975,
+  "transactions.csv": 701
+ },
+ "fetch": [
+  {
+   "name": "roads",
+   "endpoint": "https://overpass-api.de/api/interpreter",
+   "query": "[out:json][timeout:600];area[\"ISO3166-2\"=\"IN-DL\"][\"admin_level\"=\"4\"]->.a;way(area.a)[\"highway\"~\"^(motorway|trunk|primary|secondary|tertiary)(_link)?$\"];(._;>;);out body qt;",
+   "user_agent": "cb-realmap/1.0",
+   "fetched_utc": "2026-11-25T06:34:45Z",
+   "bytes": 14697831,
+   "osm_base": "2026-11-25T06:32:43Z",
+   "area_base": "2026-11-25T03:47:06Z",
+   "elements": 127055
+  },
+  {
+   "name": "places",
+   "endpoint": "https://overpass-api.de/api/interpreter",
+   "query": "[out:json][timeout:300];area[\"ISO3166-2\"=\"IN-DL\"][\"admin_level\"=\"4\"]->.a;(nwr(area.a)[\"tourism\"=\"hotel\"];nwr(area.a)[\"amenity\"=\"marketplace\"];nwr(area.a)[\"shop\"=\"bakery\"];nwr(area.a)[\"craft\"=\"caterer\"];nwr(area.a)[\"shop\"=\"catering\"];nwr(area.a)[\"amenity\"=\"canteen\"];nwr(area.a)[\"amenity\"=\"food_court\"];nwr(area.a)[\"amenity\"=\"social_facility\"];nwr(area.a)[\"amenity\"=\"food_bank\"];nwr(area.a)[\"social_facility\"=\"food_bank\"];nwr(area.a)[\"amenity\"=\"place_of_worship\"][\"religion\"=\"sikh\"];nwr(area.a)[\"amenity\"=\"community_centre\"];nwr(area.a)[\"amenity\"=\"restaurant\"];);out center tags qt;",
+   "user_agent": "cb-realmap/1.0",
+   "fetched_utc": "2026-11-25T06:36:05Z",
+   "bytes": 534875,
+   "osm_base": "2026-11-25T06:33:51Z",
+   "area_base": "2026-11-25T03:47:06Z",
+   "elements": 2031
+  },
+  {
+   "name": "localities",
+   "endpoint": "https://overpass-api.de/api/interpreter",
+   "query": "[out:json][timeout:180];area[\"ISO3166-2\"=\"IN-DL\"][\"admin_level\"=\"4\"]->.a;node(area.a)[\"place\"~\"^(suburb|neighbourhood|quarter)$\"];out qt;",
+   "user_agent": "cb-realmap/1.0",
+   "fetched_utc": "2026-11-25T06:32:59Z",
+   "bytes": 166004,
+   "osm_base": "2026-11-25T06:31:47Z",
+   "area_base": "2026-11-25T03:47:06Z",
+   "elements": 580
+  },
+  {
+   "name": "boundary",
+   "endpoint": "https://overpass-api.de/api/interpreter",
+   "query": "[out:json][timeout:180];rel[\"ISO3166-2\"=\"IN-DL\"][\"admin_level\"=\"4\"];out geom;",
+   "user_agent": "cb-realmap/1.0",
+   "fetched_utc": "2026-11-25T06:39:58Z",
+   "bytes": 67010,
+   "osm_base": "2026-11-25T06:37:58Z",
+   "area_base": "",
+   "elements": 1
+  }
+ ]
+}

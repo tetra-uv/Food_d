@@ -1,0 +1,61 @@
+donor_id,name,type,node_id
+DN001,Hotel · Samalkha #1,HOTEL,1013
+DN002,Hotel · Chittaranjan Park #1,HOTEL,422
+DN003,Hotel · Kailash Colony #1,HOTEL,734
+DN004,Hotel · Madhavpuram Village #1,HOTEL,1474
+DN005,Hotel · Shahbad Muhammadpur #1,HOTEL,184
+DN006,Hotel · Amberhai #1,HOTEL,280
+DN007,Hotel · Swaroop Nagar #1,HOTEL,1903
+DN008,Hotel · Tibetan Colony #1,HOTEL,1199
+DN009,Hotel · Pushpanjali Enclave #1,HOTEL,818
+DN010,Hotel · Naraina #1,HOTEL,625
+DN011,Hotel · Gharoli #1,HOTEL,1531
+DN012,Hotel · Govind Mohalla #1,HOTEL,1458
+DN013,Hotel · Jahangir Puri #1,HOTEL,549
+DN014,Hotel · Pandara Park #1,HOTEL,64
+DN015,Hotel · Mahipalpur #1,HOTEL,1017
+DN016,Hotel · Mahipalpur #2,HOTEL,1892
+DN017,Hotel · Jhilmil Colony #1,HOTEL,926
+DN018,Market · Vidya Vihar #1,MARKET,837
+DN019,Market · Dwarka #1,MARKET,213
+DN020,Market · Tughlakabad #1,MARKET,783
+DN021,Market · Jahangir Puri #1,MARKET,584
+DN022,Market · Sarita Vihar #1,MARKET,1967
+DN023,Market · Amberhai #1,MARKET,206
+DN024,Market · Sriniwaspuri Extension #1,MARKET,1331
+DN025,Market · Hauz Khas Enclave #1,MARKET,415
+DN026,Market · Gopal Nagar #1,MARKET,334
+DN027,Market · Vasant Kunj #1,MARKET,1990
+DN028,Market · Patparganj #1,MARKET,318
+DN029,Market · D Block #1,MARKET,896
+DN030,Bakery · Paschim Vihar #1,BAKERY,1968
+DN031,Bakery · Razapur #1,BAKERY,555
+DN032,Bakery · Shankar Market #1,BAKERY,9
+DN033,Bakery · Satya Niketan #1,BAKERY,1700
+DN034,Bakery · Maya Enclave #1,BAKERY,1124
+DN035,Bakery · Gopal Nagar #1,BAKERY,334
+DN036,Bakery · Chandni Chowk #1,BAKERY,291
+DN037,Bakery · Pocket 5 #1,BAKERY,216
+DN038,Bakery · Janakpuri #1,BAKERY,2050
+DN039,Bakery · Kailash Colony #1,BAKERY,734
+DN040,Bakery · Vasant Vihar #1,BAKERY,1537
+DN041,Bakery · Badli #1,BAKERY,1914
+DN042,Bakery · Tara Market #1,BAKERY,1122
+DN043,Caterer · Palam Village #1,CATERER,1342
+DN044,Caterer · Jahangir Puri #1,CATERER,589
+DN045,Caterer · Nawada #1,CATERER,339
+DN046,Caterer · Jahangir Puri #2,CATERER,590
+DN047,Caterer · Sadar Bazar #1,CATERER,1695
+DN048,Caterer · Azadpur #1,CATERER,541
+DN049,Caterer · Azadpur #2,CATERER,583
+DN050,Caterer · Jahangir Puri #3,CATERER,589
+DN051,Canteen · Paschim Vihar #1,CANTEEN,526
+DN052,Canteen · Connaught Place #1,CANTEEN,948
+DN053,Canteen · Haiderpur #1,CANTEEN,1461
+DN054,Canteen · Shankar Range Colony #1,CANTEEN,92
+DN055,Canteen · Nizamuddin #1,CANTEEN,19
+DN056,Canteen · Kashmere Gate #1,CANTEEN,328
+DN057,Canteen · Khirki #1,CANTEEN,1027
+DN058,Canteen · Preet Vihar #1,CANTEEN,915
+DN059,Canteen · Samaspur #1,CANTEEN,1074
+DN060,Canteen · Sadar Bazar #1,CANTEEN,1695

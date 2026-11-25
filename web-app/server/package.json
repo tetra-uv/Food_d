@@ -1,0 +1,15 @@
+{
+  "name": "communitybridge-gateway",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Node gateway between the CommunityBridge web app and cb_engine.exe (JSON-lines over stdio)",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test --test-concurrency=1 test/"
+  },
+  "dependencies": {
+    "fastify": "5.12.8"
+  }
+}

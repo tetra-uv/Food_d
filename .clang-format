@@ -1,0 +1,36 @@
+# CommunityBridge code style (clang-format).
+#
+# The style the code is written in:
+#   - braces on their own line (Allman)
+#   - 4 spaces, no tabs
+#   - pointer and reference marks stick to the type:  string& name,  Item* item
+#   - one statement per line, no one-line functions, no one-line if or loops
+#   - includes keep the order they are written in (system headers first, then project headers)
+#
+# Use it on the file you are editing:   clang-format -i console-app/src/graph.cpp
+# It is a guide for new code. It has not been run over the old files, so a reformat of an
+# old file can show small differences.
+
+Language: Cpp
+BasedOnStyle: LLVM
+Standard: c++17
+
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 120
+
+BreakBeforeBraces: Allman
+AccessModifierOffset: -4
+PointerAlignment: Left
+NamespaceIndentation: None
+IndentCaseLabels: false
+
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseLabelsOnASingleLine: false
+
+SortIncludes: false
+ReflowComments: false

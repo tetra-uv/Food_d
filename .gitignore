@@ -1,0 +1,38 @@
+# CommunityBridge .gitignore
+# Only source, data samples, scripts and documents belong in this repository.
+# Everything a build or a test run makes is ignored.
+
+# ---- build output ----
+build/
+build-*/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+*.o
+*.obj
+*.a
+*.exe
+*.dll
+*.pdb
+*.ilk
+
+# ---- packaged apps and releases (rebuild them with make_dist*.bat) ----
+desktop-app/dist/
+desktop-app/dist_pro/
+desktop-app/releases/
+desktop-app/stable/
+
+# ---- test and demo leftovers ----
+console-app/data_check/
+selftest.txt
+*.bmp
+test_all_output.txt
+
+# ---- personal tools and working notes ----
+.vscode/
+.clangd/
+compile_flags.txt
+desktop-app/_pro/
+*.lnk
+*.tmp
+*.log

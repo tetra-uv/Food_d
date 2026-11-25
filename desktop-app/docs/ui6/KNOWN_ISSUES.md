@@ -1,0 +1,11 @@
+# KNOWN ISSUES (round ui6)
+
+- The sidebar item text starts about 6 px (at 125 percent) from the left edge, while the program name and the user box start at 16 design px. The ItemsView list has no text inset of its own without a spacer image, and a wider spacer would leave the left edge of the selection unpainted in some looks. To be reviewed in Step 5 (V2, V13).
+- The list header height is chosen by Windows (font height plus its own padding), so it does not scale exactly in proportion to the dpi (25, 31, 36, 41, 44 px at 96 to 192 dpi); the check is that the header text fits (S2-5).
+- The real change of the Windows display scale cannot be done by the agent; it was covered by --selftest-dpichange (real WM_DPICHANGED to the real handler, no override) and is left to the user's --dpi-log test in the manual checklist.
+- (Step 4, FIXED in S4-5) Match at 1920x1010: the donor column takes all spare width, so the other facts sit at the far right (shots/step4/coordinator_match_96_1920x1010.png). Planned fix: equal fact columns when every fact fits its share, else the measured row of S4-3.
+- (Step 4, FIXED in S4-5) Match: the two lists share the height equally, so a short first list leaves empty space while the second scrolls. Planned fix: the first list takes only the rows it needs (at least the 120 px minimum), the second takes the rest.
+- (Step 4, minor) Match at 900x600: the Recipient column of the first list is cut while Route has room (fitcolumns caps growth at 6/10).
+- (Step 4, flaky) step4r_selftest.txt once reported (sc5) 1041 dark pixels on the selected sidebar item of coordinator/summary at 192 dpi (4 sizes); the next run step4r_selftest2.txt and all earlier runs had 0. The check reads screen pixels, so another window or a notification over the test window is the likely cause (not proven).
+- (Step 5, see test edits) the sc5 failure of step4r_selftest and step5_packaged_selftest(2) was most likely the hover look of the item under the real mouse pointer; after the change two full runs and the packaged run had 0 violations.
+- (Step 5, flaky) step5_selftest3a once reported (a) three welcome controls "outside the page host" at 96 dpi 900x600, the first page of the run; about 16 other runs had 0. Likely a start-up timing race of the test (not proven); not fixed.

@@ -36,3 +36,14 @@ desktop-app/_pro/
 *.lnk
 *.tmp
 *.log
+
+# ---- web app ----
+node_modules/
+.vercel/
+.env.local
+.env*.local
+web-app/web/dist/
+web-app/engine-wasm/dist/
+web-app/server/.secret
+web-app/data/work/
+web-app/tools/*/cache/

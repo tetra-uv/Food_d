@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-11-25T08:59:32.627Z",
+  "engine": {
+    "files": {
+      "cb_engine.mjs": "0c3df90a7db5",
+      "cb_engine.wasm": "88181e8b6cf8"
+    },
+    "bytes": 554577
+  },
+  "scenarios": [
+    {
+      "name": "delhi-real",
+      "label": "Delhi - real roads",
+      "blurb": "Real road network and place locations from OpenStreetMap; organisations simulated.",
+      "files": {
+        "donations.csv": "b14d46250bf7",
+        "donors.csv": "41a90baab961",
+        "geo_overlay.json": "f83c05b40327",
+        "graph_edges.csv": "d2662216ae43",
+        "graph_nodes.csv": "ab79eba6e33d",
+        "recipients.csv": "e5e2aef4e1bd",
+        "transactions.csv": "64c20c7c5ef7"
+      },
+      "geo": true,
+      "bytes": 995211
+    },
+    {
+      "name": "delhi-geo",
+      "label": "Delhi - 20 places",
+      "blurb": "Twenty Delhi places, travel minutes from OSRM routing.",
+      "files": {
+        "donations.csv": "e29f9194cd5a",
+        "donors.csv": "9ea53b1c6b40",
+        "geo_overlay.json": "3452c9cee41d",
+        "graph_edges.csv": "38eaf16b5f7f",
+        "graph_nodes.csv": "c9092f7212b5",
+        "recipients.csv": "4bc96f5d18ec",
+        "transactions.csv": "1d48385a07b5"
+      },
+      "geo": true,
+      "bytes": 27336
+    },
+    {
+      "name": "lab",
+      "label": "Lab (schematic)",
+      "blurb": "The original desktop app sample data on a schematic map.",
+      "files": {
+        "donations.csv": "e29f9194cd5a",
+        "donors.csv": "9ea53b1c6b40",
+        "graph_edges.csv": "ae440487c8f4",
+        "graph_nodes.csv": "228b719be475",
+        "recipients.csv": "4bc96f5d18ec",
+        "transactions.csv": "1d48385a07b5"
+      },
+      "geo": false,
+      "bytes": 5452
+    }
+  ],
+  "default": "delhi-real"
+}

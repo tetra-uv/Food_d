@@ -1,0 +1,4 @@
+transaction_id,donation_id,recipient_id,quantity,travel_minutes
+T001,DON037,R013,60,8
+T002,DON038,R002,80,15
+T003,DON040,R002,60,9

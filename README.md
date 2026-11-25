@@ -1,123 +1,132 @@
 <h1 align="center">CommunityBridge</h1>
 
 <p align="center">
-  <b>The system recommends. The coordinator decides.</b><br>
-  A food redistribution recommendation system in C++:<br>
-  a console program and a Windows desktop app that share the same rules.
+  <b>Surplus food, matched to the kitchens and shelters that can use it before it spoils.</b><br>
+  A map-based coordination tool for Delhi, with a C++ decision engine that runs in your browser.
 </p>
 
 <p align="center">
+  <a href="https://communitybridge-ashy.vercel.app"><img alt="Live demo" src="https://img.shields.io/badge/live%20demo-open%20the%20site-2F6B3F?style=for-the-badge"></a>
+</p>
+
+<p align="center">
+  <img alt="React 18" src="https://img.shields.io/badge/React-18-20232A?logo=react&logoColor=61DAFB">
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white">
   <img alt="C++17" src="https://img.shields.io/badge/C%2B%2B-17-00599C?logo=cplusplus&logoColor=white">
-  <img alt="Platform: Windows" src="https://img.shields.io/badge/platform-Windows-0078D6?logo=windows&logoColor=white">
-  <img alt="Win32 API" src="https://img.shields.io/badge/UI-Win32%20API-555555">
-  <img alt="Build: CMake and Ninja" src="https://img.shields.io/badge/build-CMake%20%2B%20Ninja-064F8C?logo=cmake&logoColor=white">
+  <img alt="WebAssembly" src="https://img.shields.io/badge/WebAssembly-engine-654FF0?logo=webassembly&logoColor=white">
+  <img alt="Leaflet" src="https://img.shields.io/badge/Leaflet-map-199900?logo=leaflet&logoColor=white">
+  <img alt="Vercel" src="https://img.shields.io/badge/hosted%20on-Vercel-000000?logo=vercel&logoColor=white">
 </p>
 
 <p align="center">
-  <img alt="The Home page of the coordinator" src="desktop-app/docs/screenshots/02-coordinator-home.png" width="860">
+  <a href="https://communitybridge-ashy.vercel.app"><img alt="The coordinator's overview: a map of Delhi with donations to assign and the ones that spoil first" src="web-app/docs/screenshots/overview.jpg" width="900"></a>
 </p>
 
-## What it does
+## The problem
 
-Food is wasted while nearby organisations go without it. A donor (a restaurant, a hotel, an event organiser) has surplus food that expires soon, and every recipient has different limits: how much it can hold, which food it takes, whether it is accepting, whether it can collect. CommunityBridge does the checking a coordinator would do by phone and spreadsheet:
+A restaurant, a hotel or a caterer has cooked food that will spoil in a few hours. Nearby kitchens, shelters and food banks could use it, but each has its own limits: how much it can hold, which food it takes, whether it is accepting today, whether it can collect. A coordinator ends up checking all of that by phone and spreadsheet, again and again, while the clock runs.
 
-1. A donor offers food with a quantity, a pickup place and a **usable time** in minutes.
-2. **Dijkstra's shortest path** gives the travel time from the donor to every location on a road map.
-3. Each recipient is checked against **six feasibility rules**. The first rule that fails is kept as the reason, so a rejection is always explained.
-4. The recipients that pass are **ranked**: more food accepted, shorter travel, less unused capacity, smaller id.
-5. The coordinator picks a recipient and a quantity. One donation can be **split** between several recipients.
-6. The donation and the recipient are updated and the allocation is saved as a **transaction**.
+CommunityBridge does that checking and **explains every decision**: who can take the food in time and in what order, and why each of the others was left out. The coordinator still makes the call.
 
-The program only recommends. The final choice is always a person's.
+## Try it in a minute
 
-> The travel distances in the sample data are simulated, not real map data.
+Open **[communitybridge-ashy.vercel.app](https://communitybridge-ashy.vercel.app)**. Nothing to install and no sign-in.
 
-## The two programs
+1. Choose **Coordinator**. The map shows donations that need assigning, the ones that spoil first at the top.
+2. Open the first donation. The engine has checked all 140 recipients and lists the ones that can take it in time, best first, with the reason behind each rank.
+3. Press **Assign…** on the first recipient, then **Send offer**. It appears under **Offers**.
+4. Open the site in a second tab and choose **Recipient**, then that organisation. The offer is waiting; press **Accept**.
+5. Back in the coordinator tab, open **Deliveries**. The food is on its way along the real road route.
+6. Want to play a donor? Choose **Donor** and use **Add donation**: it shows how many places could take your food as you change the quantity and the time.
 
-| Folder | What it is |
-|--------|------------|
-| [console-app](console-app) | **The console program.** Data loading and checking, urgency order, travel times, feasibility rules, ranking and allocation. The main data structures are written by hand. |
-| [desktop-app](desktop-app) | **The Windows desktop app.** Screens for the Coordinator, the Donor and the Recipient. Two interfaces (classic and pro) share one backend. |
+Your changes stay in your own browser. **Settings → Reset data** starts over.
 
-The desktop app does not copy the console code. It compiles `console-app/src` directly, so both programs use the same rules and the same data format. For that reason the two folders must stay side by side.
-
-```
-console-app/   the rules, the data structures, the CSV files
-     |            (its sources are compiled again, read-only, by the desktop app)
-desktop-app/   one backend, two interfaces (classic and pro)
-```
-
-## The desktop app
+## What you see
 
 <table>
   <tr>
-    <td width="50%"><img alt="Welcome page with the three roles" src="desktop-app/docs/screenshots/01-welcome.png"><br><sub><b>Welcome.</b> Pick a role, then a name.</sub></td>
-    <td width="50%"><img alt="Donations table with status chips" src="desktop-app/docs/screenshots/03-donations.png"><br><sub><b>Donations.</b> Status chips, flagged rows for data that needs a check.</sub></td>
+    <td width="50%"><a href="web-app/docs/screenshots/match.jpg"><img alt="A donation with the recommended recipients, ranked, with reasons" src="web-app/docs/screenshots/match.jpg"></a><br><sub><b>Match a donation.</b> Recipients ranked by the engine, with the route on the map and a plain reason for every rank.</sub></td>
+    <td width="50%"><a href="web-app/docs/screenshots/deliveries.jpg"><img alt="Deliveries: a delivery on the way, shown on the map of Delhi" src="web-app/docs/screenshots/deliveries.jpg"></a><br><sub><b>Deliveries.</b> An accepted offer becomes a delivery that moves along its route on a simulated clock.</sub></td>
   </tr>
   <tr>
-    <td width="50%"><img alt="Match a donation: ranked recipients and the reasons for the others" src="desktop-app/docs/screenshots/04-match-a-donation.png"><br><sub><b>Match a donation.</b> Ranked recipients, and why the others cannot take it.</sub></td>
-    <td width="50%"><img alt="Recipient details form" src="desktop-app/docs/screenshots/05-recipient-details.png"><br><sub><b>Recipient details.</b> Capacity, flags and food types.</sub></td>
+    <td width="50%"><a href="web-app/docs/screenshots/recipient-inbox.png"><img alt="A recipient's incoming offer with Accept and Decline" src="web-app/docs/screenshots/recipient-inbox.png"></a><br><sub><b>Recipient.</b> The offer, how far away it is, and how much time is left when it arrives.</sub></td>
+    <td width="50%"><a href="web-app/docs/screenshots/donor-add.png"><img alt="The donor's form with a live count of places that can take the food" src="web-app/docs/screenshots/donor-add.png"></a><br><sub><b>Donor.</b> Add a donation and see at once how many places could take it in time.</sub></td>
   </tr>
 </table>
 
-| Role | What they do |
-|------|--------------|
-| **Coordinator** | Sees donations, matches a donation to ranked recipients, sends or withdraws an offer, closes donations, reads the summary |
-| **Donor** | Adds a donation and follows what happened to their donations and offers |
-| **Recipient** | Accepts or declines offers, sees past offers and received food, keeps their details up to date |
+## How it decides
 
-Offers are soft: the coordinator sends one, the recipient accepts it (this runs the console app's allocation) or declines it. Both interfaces show the same pages and workflows: the **classic** one, and the **pro** one in a calm Windows 11 style (rounded cards, one icon per sidebar item, soft status chips, toasts and a short page fade). Design rules: [desktop-app/docs/DESIGN_GUIDE.md](desktop-app/docs/DESIGN_GUIDE.md).
+For a donation, the engine:
 
-## Highlights
+1. finds the **travel time** from the donor to every location on the road network (Dijkstra's shortest path),
+2. checks each recipient against **six rules**: it is accepting, it takes this kind of food, it has room, it can collect, a road reaches it, and it can be reached within the food's usable time,
+3. **ranks** the recipients that pass: more food accepted, shorter travel, less unused capacity, then a fixed tie-break,
+4. keeps the **first rule each other recipient fails** as its reason.
 
-- **Hand-written data structures:** min-heap priority queue, stack, queue, hash index, merge sort, and a weighted graph with shortest path.
-- **Explained decisions:** every rejected recipient carries the reason it was rejected.
-- **Safe data handling:** every file is checked at start-up (header, unique ids, references, quantities, statuses) and every save goes through a temporary file, so an interrupted save cannot damage the last good data.
-- **One backend, two programs:** the desktop app reuses the console app sources unchanged.
-- **Tests at every layer:** one test program per console module, backend tests for the desktop app, and the real window is driven by built-in self-tests that measure the layout at different display scales and walk through the workflows (16 CTest tests).
-- **Plain Win32:** no UI framework. The pro interface draws its shapes with GDI+ and its text with GDI (ClearType). No libraries are needed beyond the compiler, and the programs link statically.
+A donation can be split between several recipients. The offer, the recipient's answer and the delivery follow.
 
-## Quick start (Windows)
+## How it is built
 
-You need a MinGW g++ with C++17. The desktop app also needs CMake and Ninja.
-
-**The console program** (from the root folder of the repository):
-
-```
-.\demo_console.bat
+```mermaid
+flowchart LR
+  UI["React UI<br/>web-app/web"] --> API["Local API layer"]
+  API --> W["Web Worker"]
+  W --> E["C++ engine as WebAssembly<br/>web-app/engine-wasm"]
+  E --> F[("CSV data in memory")]
+  F -. "saved after every change" .-> IDB[("IndexedDB<br/>this visitor only")]
 ```
 
-It builds the program and runs it on a fresh copy of the sample data, so the real data is never changed.
+- **The site is static.** There is no server and no database. The C++ rules engine is compiled to WebAssembly and runs in a Web Worker in each visitor's browser, so every ranking and every rejection reason comes from the C++ code, never from the interface.
+- **Each visitor has their own copy of the data**, kept in IndexedDB. Two tabs share it live, so a coordinator tab and a recipient tab can play the whole workflow together.
+- **The same engine** also builds as a native program behind a small Node gateway for development. A test compares the two builds byte for byte.
+- **Real Delhi.** The `delhi-real` data set uses the real main roads and place locations of all of NCT Delhi from OpenStreetMap, about 2,000 junctions and 3,600 road segments. Organisation names, capacities and donations are simulated; travel minutes come from a speed model per road class.
 
-**The desktop app:**
+More detail, commands and the data sets are in [web-app/README.md](web-app/README.md).
+
+## Tech
+
+| Part | Used |
+|------|------|
+| Interface | React 18, TypeScript (strict), zustand, Leaflet with OpenStreetMap tiles, plain CSS |
+| Engine | C++17, compiled with Emscripten to WebAssembly (Web Worker), also a native build |
+| Data | Six CSV files per data set, OpenStreetMap roads and places, built with Python scripts |
+| Storage | IndexedDB, Web Locks and BroadcastChannel in the browser |
+| Hosting | Vercel (static) |
+
+## Run it yourself
+
+You need Node 22 or newer.
 
 ```
-cd desktop-app
-.\run_pro.bat
+cd web-app\web
+npm ci
+npm run dev:local
 ```
 
-It builds the program and opens it. Use `.\run_gui.bat` for the classic interface. `.\reset_data.bat` puts the sample data back. More in [desktop-app/README.md](desktop-app/README.md).
+Build and deploy, rebuild the engine, or run the native engine with the gateway: see [web-app/README.md](web-app/README.md) and [web-app/web/DEPLOY.md](web-app/web/DEPLOY.md).
 
 ## Repository layout
 
 ```
-console-app/         console program: src, include, tests, data
-desktop-app/         desktop app: src, pro, include, res, tests, data, docs
-run_console.bat      build and run the console program on console-app\data
-demo_console.bat     build and run the console program on a copy of the data
-.clang-format        the code style
-.gitignore           build output and packaged apps are not stored here
+web-app/          the web app and everything behind it
+  web/              the site (Vite, React, TypeScript, Leaflet)
+  engine-wasm/      the C++ engine as WebAssembly
+  engine/           the same engine as a native program
+  server/           development gateway (Node, Fastify)
+  data/             the three data sets
+  tools/            data builders and an independent cross-check
+console-app/      the C++ core: data loading and checks, urgency queue, shortest paths, feasibility rules, ranking, allocation
+desktop-app/      a Windows desktop version of the same workflow (C++, Win32)
 ```
 
-Built programs (`.exe`) are not stored in the repository. Build them with the scripts above.
+The engine compiles `console-app` and the workflow code of `desktop-app` unchanged, so the rules are written once.
 
-## Code style
+## Data and credits
 
-C++17, braces on their own line, 4 spaces, 120 columns. The rules are in [.clang-format](.clang-format). Screen texts carry no punctuation, and the design rules of the desktop app are in [desktop-app/docs/DESIGN_GUIDE.md](desktop-app/docs/DESIGN_GUIDE.md).
+Map data © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), under the Open Database Licence 1.0. Map tiles come from the public OpenStreetMap tile server, which is meant for light use. All organisation names, capacities and donations are invented.
 
 ## Limits
 
-- Travel times use simulated distances.
-- Map locations and roads are added by editing the two map files, not from the program.
-- Names cannot contain a comma, because the data files are comma separated.
-- The desktop app is Windows only and light mode only.
+- It is a demo: anyone can pick any role, and there is no sign-in.
+- Travel times are modelled from road class and length, not measured traffic.
+- Delivery progress is drawn on a simulated clock (1 second is 1 minute, or real time).

@@ -1,0 +1,36 @@
+{
+  "crs": "EPSG:4326",
+  "scenario": "lab (TEMPORARY dev overlay)",
+  "source": "FAKE-FOR-DEV: hand-typed approximate Delhi-ish coordinates to exercise the web map. NOT real data, NOT verified, never copy into data/.",
+  "disclaimer": "Approximate locations - routing estimates. FAKE-FOR-DEV placeholder coordinates.",
+  "minutesSource": "simulated",
+  "nodes": [
+    {"id": 0, "lat": 28.6510, "lng": 77.1900, "confidence": "approx", "note": "fake-for-dev"},
+    {"id": 1, "lat": 28.6420, "lng": 77.2950, "confidence": "approx", "note": "fake-for-dev"},
+    {"id": 2, "lat": 28.7070, "lng": 77.1760, "confidence": "approx", "note": "fake-for-dev"},
+    {"id": 3, "lat": 28.6280, "lng": 77.2410, "confidence": "approx", "note": "fake-for-dev"},
+    {"id": 4, "lat": 28.5890, "lng": 77.2500, "confidence": "approx", "note": "fake-for-dev"},
+    {"id": 5, "lat": 28.6430, "lng": 77.2140, "confidence": "approx", "note": "fake-for-dev"},
+    {"id": 6, "lat": 28.6320, "lng": 77.2190, "confidence": "approx", "note": "fake-for-dev"},
+    {"id": 7, "lat": 28.6730, "lng": 77.2890, "confidence": "approx", "note": "fake-for-dev"},
+    {"id": 8, "lat": 28.6410, "lng": 77.1220, "confidence": "approx", "note": "fake-for-dev"},
+    {"id": 9, "lat": 28.6760, "lng": 77.3210, "confidence": "approx", "note": "fake-for-dev"},
+    {"id": 10, "lat": 28.5890, "lng": 77.2270, "confidence": "approx", "note": "fake-for-dev"},
+    {"id": 11, "lat": 28.6390, "lng": 77.0870, "confidence": "approx", "note": "fake-for-dev"},
+    {"id": 12, "lat": 28.6850, "lng": 77.2300, "confidence": "approx", "note": "fake-for-dev"},
+    {"id": 13, "lat": 28.6290, "lng": 77.2270, "confidence": "approx", "note": "fake-for-dev"},
+    {"id": 14, "lat": 28.6710, "lng": 77.3150, "confidence": "approx", "note": "fake-for-dev"},
+    {"id": 15, "lat": 28.5840, "lng": 77.2400, "confidence": "approx", "note": "fake-for-dev"},
+    {"id": 16, "lat": 28.6080, "lng": 77.2980, "confidence": "approx", "note": "fake-for-dev"},
+    {"id": 17, "lat": 28.6250, "lng": 77.3100, "confidence": "approx", "note": "fake-for-dev"},
+    {"id": 18, "lat": 28.6090, "lng": 76.9790, "confidence": "approx", "note": "fake-for-dev"},
+    {"id": 19, "lat": 28.5920, "lng": 77.0000, "confidence": "approx", "note": "fake-for-dev"}
+  ],
+  "edges": [
+    {"u": 0, "v": 2, "minutes": 8, "geometry": [[77.1900, 28.6510], [77.1800, 28.6700], [77.1760, 28.7070]]},
+    {"u": 0, "v": 4, "minutes": 6, "geometry": [[77.1900, 28.6510], [77.2300, 28.6200], [77.2500, 28.5890]]},
+    {"u": 0, "v": 8, "minutes": 12},
+    {"u": 4, "v": 6, "minutes": 9, "geometry": [[77.2500, 28.5890], [77.2400, 28.6100], [77.2190, 28.6320]]},
+    {"u": 6, "v": 3, "minutes": 5}
+  ]
+}

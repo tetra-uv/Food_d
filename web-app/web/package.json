@@ -1,0 +1,36 @@
+{
+  "name": "communitybridge-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "CommunityBridge Atlas web frontend (Vite + React + TypeScript + Leaflet)",
+  "scripts": {
+    "dev": "vite",
+    "dev:mock": "node scripts/dev-mock.mjs",
+    "dev:mock:geo": "node scripts/dev-mock.mjs --geo",
+    "mock": "node mock/server.mjs",
+    "fixtures": "node mock/gen-fixtures.mjs",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "assets": "node scripts/copy-assets.mjs",
+    "prebuild": "node scripts/copy-assets.mjs",
+    "build:vercel": "node scripts/copy-assets.mjs && tsc --noEmit && vite build --mode static",
+    "dev:local": "node scripts/copy-assets.mjs && vite --mode static"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zustand": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.22",
+    "@types/node": "^26.6.6",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^6.3.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  }
+}
